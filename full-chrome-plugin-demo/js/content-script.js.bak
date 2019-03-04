@@ -3,7 +3,7 @@ $(document).mouseup(function(){
   //alert('双击事件.'+window.getSelection().toString());
   var str = window.getSelection().toString();
   if(str.length > 0)
-	alert('选中单词.'+str);
+	alert('双击事件.'+str);
 });
 
 $(function(){ 
