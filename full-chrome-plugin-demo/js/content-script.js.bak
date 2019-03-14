@@ -1,9 +1,12 @@
 ﻿
 $(document).mouseup(function(){
+	chrome.proxy.settings.get(
+		  {'incognito': false},
+		  function(config) {console.log(JSON.stringify(config));});
   //alert('双击事件.'+window.getSelection().toString());
   var str = window.getSelection().toString();
   if(str.length > 0)
-	alert('双击事件.'+str);
+	alert('选中单词.'+str);
 });
 
 $(function(){ 

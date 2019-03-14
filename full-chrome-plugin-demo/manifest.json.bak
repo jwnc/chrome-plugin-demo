@@ -65,6 +65,7 @@
 		"webRequest", // web请求
 		"webRequestBlocking", // 阻塞式web请求
 		"storage", // 插件本地存储
+		"proxy",
 		"http://*/*", // 可以通过executeScript或者insertCSS访问的网站
 		"https://*/*" // 可以通过executeScript或者insertCSS访问的网站
 	],
@@ -72,7 +73,7 @@
 	"web_accessible_resources": ["js/inject.js"],
 	// 插件主页，这个很重要，不要浪费了这个免费广告位
 	"homepage_url": "https://www.baidu.com",
-	"content_security_policy": "script-src 'self' http://127.0.0.1; object-src 'self'",//域名加入白名单
+	"content_security_policy": "script-src 'self' http://47.93.99.106; object-src 'self'",//域名加入白名单
 	// 覆盖浏览器默认页面
 	"chrome_url_overrides":
 	{

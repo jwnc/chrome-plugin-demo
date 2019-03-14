@@ -1,0 +1,46 @@
+{
+	"manifest_version": 2,
+	"name": "Chrome插件demo",
+	"version": "1.0",
+	"description": "最简单的Chrome插件demo，需要快速做一个简单的插件时可以基于这个仓库开发",
+	"author": "sxei",
+	"icons":
+	{
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"browser_action": 
+	{
+		"default_icon": "icon.png",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["<all_urls>"],
+			"js": ["js/jquery-1.11.1.js","js/content-script.js","js/layer.js"],
+			"run_at": "document_start"
+		}
+	],
+	"background":
+	{
+		// 2种指定方式，如果指定JS，那么会自动生成一个背景页
+		"page": "background.html"
+		//"scripts": ["js/background.js"]
+	},
+	"permissions":
+	[
+	        "contextMenus", // 右键菜单
+		"tabs", // 标签
+		"notifications", // 通知
+		"webRequest", // web请求
+		"webRequestBlocking", // 阻塞式web请求
+		"storage", // 插件本地存储
+		"http://*/*", // 可以通过executeScript或者insertCSS访问的网站
+		"https://*/*" // 可以通过executeScript或者insertCSS访问的网站
+	],
+	"web_accessible_resources": 
+	[
+		"inject.js"
+	]
+}
