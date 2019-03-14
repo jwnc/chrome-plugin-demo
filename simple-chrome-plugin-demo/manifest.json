@@ -43,6 +43,7 @@
 	//可以被外部访问到的资源
 	"web_accessible_resources": 
 	[
-		"css/*"
+		"css/*",
+		"icon2.png"
 	]
 }

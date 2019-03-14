@@ -7,7 +7,7 @@
 	"icons":
 	{
 		"48": "icon.png",
-		"128": "icon.png"
+		"128": "icon2.png"
 	},
 	"browser_action": 
 	{
@@ -40,8 +40,10 @@
 		"http://*/*", // 可以通过executeScript或者insertCSS访问的网站
 		"https://*/*" // 可以通过executeScript或者insertCSS访问的网站
 	],
+	//可以被外部访问到的资源
 	"web_accessible_resources": 
 	[
-		"css/*"
+		"css/*",
+		"icon2.png"
 	]
 }
