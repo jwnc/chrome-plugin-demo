@@ -1,3 +1,15 @@
+$(function() {
+	chrome.storage.sync.get({ITtran: true}, function(items) {
+		//document.body.style.backgroundColor = 'black';
+		var iconPath = items.ITtran ? 'icon.png' : 'icon2.png';
+		chrome.browserAction.setIcon({path : {
+			"48": iconPath,
+			"64": iconPath,
+			"128": iconPath
+		}});
+	});
+});
+
 // 监听来自content-script的消息
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 {
