@@ -19,6 +19,7 @@
 		{
 			"matches": ["<all_urls>"],
 			"js": ["js/jquery-1.11.1.js","js/content-script.js","js/layer.js"],
+			"css": ["css/layer.css"],
 			"run_at": "document_start"
 		}
 	],
@@ -41,6 +42,6 @@
 	],
 	"web_accessible_resources": 
 	[
-		"inject.js"
+		"css/*"
 	]
 }
