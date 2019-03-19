@@ -3,6 +3,11 @@
 		//document.body.style.backgroundColor = 'black';
 		showbtnTip(items.ITtran);
 	});
+
+	chrome.extension.sendMessage({uri:"query_wordhistory",data:{},url:"http://localhost:8088/booklog"}, function(response) {
+		console.info(response);
+		$("#word_history").html(response);
+	});
 });
 
 $('#changeTranCfg').click(e => {
@@ -16,6 +21,10 @@ $('#changeTranCfg').click(e => {
 		});
 	});
 	
+});
+
+$('#viewHistory').click(e => {
+	window.open('http://localhost:8088/booklog');
 });
 
 function showbtnTip(flag){
