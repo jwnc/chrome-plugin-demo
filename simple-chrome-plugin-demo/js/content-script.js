@@ -18,7 +18,7 @@ function tranIfCfg(word){
 function tranWithWord(word){
 	if(word && /^[a-z]+$/i.test(word)){
 		console.log('选中单词.'+word);
-		chrome.extension.sendMessage({uri:"xdd_add",data:{},url:"http://47.93.99.106/readlog/readlog?word="+word}, function(response) {
+		chrome.extension.sendMessage({uri:"xdd_add",data:{},url:"http://47.93.99.106/sboot1/readlog/readlog?word="+word}, function(response) {
 			console.info(response);
 			var mean = response.cn_mean;
 			if(mean){
